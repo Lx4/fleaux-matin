@@ -1,1 +1,143 @@
-<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Fléaux Matin</title><h1>Fléaux Matin</h1><p>First edition coming soon.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fléaux Matin, Monday, November 9, 2026</title>
+<style>
+:root{--paper:#f4efe4;--ink:#1b1916;--soft:#5d574c;--rule:#1b1916;--red:#a3271c;--display:"Bodoni 72",Didot,"Playfair Display","Times New Roman",serif;--text:"Iowan Old Style",Palatino,Georgia,serif;--label:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{background:#2a2622}
+body{margin:0;padding:28px 16px 90px;color:var(--ink);font:17px/1.48 var(--text)}
+a{color:inherit;text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .2s}
+a:hover{background-size:100% 1px}
+.book{max-width:1120px;margin:0 auto;perspective:2400px;position:relative}
+.page{background:var(--paper);padding:30px 42px 26px;box-shadow:0 18px 50px rgba(0,0,0,.45);transform-origin:left center;backface-visibility:hidden;display:none}
+.page.on{display:block}
+.page.out{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) forwards}
+.page.back{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) reverse forwards}
+@keyframes turn{from{transform:rotateY(0);filter:brightness(1)}to{transform:rotateY(-105deg);filter:brightness(.62)}}
+@media (prefers-reduced-motion:reduce){.page.out,.page.back{display:none}}
+.mast{text-align:center;border-bottom:4px double var(--rule);padding-bottom:10px}
+.mast .top,.folio{display:flex;justify-content:space-between;font:600 11px/1.3 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.mast h1{font:400 clamp(46px,10.5vw,118px)/.98 var(--display);margin:8px 0 6px;letter-spacing:-.01em}
+.mast .sub{font-style:italic;color:var(--soft)}
+.small-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--rule);padding-bottom:7px}
+.small-head b{font:400 34px/1 var(--display)}
+.small-head span{font:600 11px var(--label);letter-spacing:.12em;text-transform:uppercase}
+.kicker{font:700 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 7px}
+h2,h3{font-family:var(--display);font-weight:400;margin:0 0 9px}
+h2.lead{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h3{font-size:27px;line-height:1.1}
+p{margin:0 0 11px}
+.deck{font-size:20px;line-height:1.35;font-style:italic;color:var(--soft)}
+.src{font:600 11px/1.5 var(--label);letter-spacing:.04em;color:var(--soft)}
+.src a{border-bottom:1px solid var(--soft);background:none}
+.front{display:grid;grid-template-columns:2.1fr 1fr;margin-top:20px}
+.front>*{min-width:0}
+.main{padding-right:30px;border-right:1px solid var(--rule)}
+.side{padding-left:26px}
+.cols{columns:2;column-gap:28px;column-rule:1px solid #b8b09f;margin-top:12px}
+.cols p:first-child::first-letter{font:400 66px/.82 var(--display);float:left;padding:5px 7px 0 0}
+.story{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid #b8b09f;break-inside:avoid}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;padding-top:15px;border-top:3px solid var(--rule)}
+.band>div+div{border-left:1px solid #b8b09f;padding-left:28px}
+.tip{background:var(--ink);color:var(--paper);padding:17px 20px;margin-top:16px}
+.tip .kicker{color:#e6b65c}
+.tip h3{font-size:23px}
+.tip p{margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:20px}
+.grid3>.story{border-bottom:1px solid #b8b09f}
+.wide{grid-column:span 2}
+.wide h3{font-size:40px;line-height:1.05}
+.hn-list{counter-reset:n;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.hn{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:13px 0;border-bottom:1px solid #b8b09f}
+.hn::before{content:counter(n);font:400 48px/1 var(--display);color:var(--red)}
+.hn h3{font-size:24px;margin-bottom:5px}
+.hn p{font-size:16px;margin-bottom:5px}
+.folio{margin-top:20px;padding-top:8px;border-top:1px solid var(--rule)}
+nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--ink);color:var(--paper);padding:7px;border:1px solid #6c6455;font:600 12px var(--label);z-index:9;white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:8px 12px}
+nav button:hover,nav button:focus-visible{background:var(--paper);color:var(--ink)}
+nav button:disabled{opacity:.3;cursor:default;background:none;color:inherit}
+nav i{font-style:normal;min-width:62px;text-align:center}
+nav s{width:1px;height:20px;background:#6c6455}
+@media (max-width:760px){
+body{padding:0 0 84px;font-size:17px}
+.page{padding:18px 18px 22px;box-shadow:none}
+.mast .top span:nth-child(2){display:none}
+.front,.band,.grid3,.hn-list{display:block}
+.main{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--rule)}
+.side{padding:18px 0 0}
+.cols{columns:1}
+.band>div+div{border-left:0;padding-left:0;margin-top:16px}
+.wide h3{font-size:31px}
+nav .day{display:none}
+}
+</style>
+</head>
+<body>
+<main class="book" id="book">
+<article class="page on" aria-label="Front page"><header class="mast"><div class="top"><span>Monday, November 9, 2026</span><span>The AI agents daily</span><span>No. 1</span></div><h1>Fléaux Matin</h1><div class="sub">What mattered yesterday on X and Hacker News, read so you don’t have to</div></header><section class="front"><div class="main"><p class="kicker">Agents</p><h2 class="lead">Claude beats quantum baselines with a scoring loop</h2><p class="deck">Anthropic gave Claude eight quantum circuit-design problems and an automated evaluator. Iterating against it, the model beat published baselines, including a decoder with 12x fewer gates.</p><div class="cols"><p>The setup was simple. Each problem came with an evaluator that checks correctness and cost. Claude proposed designs, got scored, and tried again.</p><p>The reported result: better than published baselines on the problems tested, among them a decoder using 12x fewer gates. The win is credited to the closed loop with a checker, not to a cleverer prompt.</p><p>The lesson carries over to everyday code. A script that scores output, say tests plus a performance or size number, gives an agent something firm to iterate against.</p><p class="src"><a href="https://x.com/i/trending/2119368122599629217">The story</a> · <a href="https://x.com/doublenickk/status/2119438225915727977">Summary</a></p></div><div class="tip"><p class="kicker">Try it</p><h3>Give your agent a scorer</h3><p>Write a script that scores Claude Code’s output: tests plus a perf or size number. Let it iterate against that score. Then add one verification step to your CLAUDE.md, the exact test or lint command Claude must run before saying it is done.</p></div></div><aside class="side"><div class="story"><p class="kicker">Benchmarks</p><h3>MaxxBench: small tweaks, big gaps</h3><p>MaxxBench is 89 DeepSWE tasks with tiny changes to the instructions or starting code. Models that all sit around 74% on DeepSWE ended up 23 points apart. Before switching models, rerun two of your own real tasks with a small twist and compare.</p><p class="src"><a href="https://x.com/loresjpg/status/2118880329490637049">Justin Lo</a> · <a href="https://maxxbench.unlap.ai/research/why-maxxbench/">MaxxBench</a></p></div><div class="story"><p class="kicker">Models</p><h3>OpenAI teases “Tomorrow” as GPT-6.2 Sol surfaces</h3><p>OpenAI Developers posted a one-word “Tomorrow.” teaser. Users report an upgraded GPT-6.2 Sol live in ChatGPT and Codex, with longer Plus limits. Comparisons with Opus 5.5 are anecdotal so far.</p><p class="src"><a href="https://x.com/OpenAIDevs/status/2119521359185478140">OpenAIDevs</a> · <a href="https://x.com/i/trending/2119648831021424974">The story</a></p></div></aside></section><section class="band"><div class=""><p class="kicker">Security</p><h3>A tool to trap AI reverse-engineering agents</h3><p>BLA (Blind LLM Agents) is a free open-source tool that plants fake keys, decoy logic and resource traps in builds so AI reverse-engineering agents waste tokens, while the app runs unchanged. It has about 3.3k GitHub stars; the token-burn numbers are the author’s claims.</p><p class="src"><a href="https://x.com/0xCodila/status/2119147351604601206">codila</a> · <a href="https://x.com/i/trending/2119471426621288551">The story</a></p></div><div class=""><p class="kicker">Workflow</p><h3>Willison collapses AI-written PR text</h3><p>Simon Willison hides the bulk of his AI-written PR descriptions in a collapsed summary block. A short human summary stays on top, to make PR slop less tiring for reviewers.</p><p class="src"><a href="https://x.com/simonw/status/2119650353142747181">simonw</a></p></div><div class=""><p class="kicker">Science</p><h3>DeepMind sees a “phase transition”</h3><p>Pushmeet Kohli of Google DeepMind says the lab is seeing “a genuine phase transition in the pace of scientific discovery”. He says releases are coming in the next few weeks.</p><p class="src"><a href="https://x.com/pushmeet/status/2119373171321196892">Pushmeet Kohli</a></p></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 1</span></footer></article>
+<article class="page" aria-label="On X"><header class="small-head"><b>On X</b><span>Monday, November 9, 2026</span></header><section class="grid3"><div class="story wide"><p class="kicker">Harnesses</p><h3>Seven harnesses, one narrow pass-rate band</h3><p>Garry Tan ran 7 coding harnesses on the same 20 tasks. Pass rates only ranged from 71% to 79%, so the real gaps were cost per solved task ($0.19 to $0.44) and speed. Elvis Saravia argues for owning a minimal harness instead of renting one.</p><p class="src"><a href="https://x.com/i/trending/2119567611948064929">The story</a> · <a href="https://x.com/omarsar0/status/2119509243015442577">omarsar0</a></p></div><div class="story"><p class="kicker">Workflow</p><h3>Cherny’s Claude Code setup goes around again</h3><p>A 28-minute video of Boris Cherny’s setup is circulating: parallel sessions, project memory in CLAUDE.md, and loops where Claude checks its own work. He says he hasn’t written code by hand in a year and ships 10 to 30 PRs a day.</p><p class="src"><a href="https://x.com/i/trending/2119687881199702287">The story</a></p></div><div class="story"><p class="kicker">Workflow</p><h3>Armstrong runs a chief-of-staff agent</h3><p>Coinbase’s Brian Armstrong runs an agent that directs sub-agents for code, tests and reviews. Everything lands in one queue with screenshots and videos, which he reviews in batches.</p><p class="src"><a href="https://x.com/i/trending/2119298665034437048">The story</a></p></div><div class="story"><p class="kicker">Society</p><h3>Collison asks what a good AI future looks like</h3><p>Patrick Collison asks whether people work, what stays scarce and who is in control. He also argues that granting AIs even tiny moral worth would outweigh humans by sheer numbers.</p><p class="src"><a href="https://x.com/patrickc/status/2119495828683530519">patrickc</a></p></div></section><div class="tip"><p class="kicker">Habits</p><h3>Build your own baseline</h3><p>Rerun one real Claude Code task in Codex today, so you have your own numbers before launch hype lands. Ask Claude Code to write your next PR body as a 2-line summary plus a collapsed details section.</p></div><footer class="folio"><span>Fléaux Matin</span><span>Page 2</span></footer></article>
+<article class="page" aria-label="Hacker News"><header class="small-head"><b>Hacker News</b><span>Monday, November 9, 2026</span></header><section class="hn-list"><div class="hn"><div><h3><a href="https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers">Goldman Sachs is pulling Claude Code from its bankers and traders</a></h3><p>Goldman Sachs is pulling Claude Code from its bankers and traders, according to this report.</p><p class="src">766 points · <a href="https://news.ycombinator.com/item?id=50415628">408 comments</a></p></div></div><div class="hn"><div><h3><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again">Claude Code’s “Don’t Ask Again” exposes passwords in 1,122 public GitHub files</a></h3><p>An Apiiro post says Claude Code’s “Don’t Ask Again” option exposes passwords in 1,122 public GitHub files.</p><p class="src">602 points · <a href="https://news.ycombinator.com/item?id=50407882">408 comments</a></p></div></div><div class="hn"><div><h3><a href="https://caleb.software/posts/claude-to-pi.html">Goodbye Claude, hello Pi</a></h3><p>A developer explains a move from Claude to Pi.</p><p class="src">758 points · <a href="https://news.ycombinator.com/item?id=50410107">468 comments</a></p></div></div><div class="hn"><div><h3><a href="https://twitter.com/shanemelaugh/status/2119192075505893695">Is Opus 5.5 nerfed? Thinking patterns changed on November 3</a></h3><p>A post asks whether Opus 5.5 is nerfed, noting changed thinking patterns on November 3.</p><p class="src">85 points · <a href="https://news.ycombinator.com/item?id=50422069">53 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.lorekit.io/blog/open-agent-memory-format">Agent memory needs its OpenTelemetry moment</a></h3><p>A blog post argues agent memory needs its OpenTelemetry moment.</p><p class="src">181 points · <a href="https://news.ycombinator.com/item?id=50411467">107 comments</a></p></div></div><div class="hn"><div><h3><a href="https://news.ycombinator.com/item?id=50422628">ChatGPT Desktop forwards your SSH agent to remote machines</a></h3><p>A post says ChatGPT Desktop forwards your SSH agent to remote machines.</p><p class="src">4 points · <a href="https://news.ycombinator.com/item?id=50422628">1 comments</a></p></div></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 3</span></footer></article>
+</main>
+
+<nav aria-label="Navigation">
+  <button class="day" id="prevDay" disabled>‹‹ Previous day</button><s class="day"></s>
+  <button id="prev" aria-label="Previous page">‹ Page</button>
+  <i id="count">1 / 3</i>
+  <button id="next" aria-label="Next page">Page ›</button><s class="day"></s>
+  <button class="day" id="nextDay" disabled>Next day ››</button>
+</nav>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const prev = document.getElementById('prev'), next = document.getElementById('next'), count = document.getElementById('count');
+let cur = 0, busy = false;
+function show() { count.textContent = (cur + 1) + ' / ' + pages.length; prev.disabled = cur === 0; next.disabled = cur === pages.length - 1; }
+function clean(p) { p.classList.remove('out', 'back'); }
+function go(to) {
+  if (busy || to < 0 || to >= pages.length || to === cur) return;
+  const forward = to > cur, from = pages[cur], target = pages[to];
+  const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  cur = to; show(); scrollTo({top: 0});
+  if (still) { from.classList.remove('on'); target.classList.add('on'); return; }
+  busy = true;
+  let done = false;
+  const moving = forward ? from : target;
+  const finish = () => {
+    if (done) return;
+    done = true; clean(moving);
+    if (!forward) { target.classList.add('on'); from.classList.remove('on'); }
+    busy = false;
+  };
+  if (forward) { from.classList.add('out'); from.classList.remove('on'); target.classList.add('on'); }
+  else target.classList.add('back');
+  moving.addEventListener('animationend', finish, {once: true});
+  setTimeout(finish, 900);  // in case the animation never ends (background tab)
+}
+prev.onclick = () => go(cur - 1);
+next.onclick = () => go(cur + 1);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1); });
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+});
+show();
+const ROOT = '', DATE = '2026-11-09';
+fetch(ROOT + 'editions.json').then(r => r.json()).then(list => {
+  const i = list.indexOf(DATE);
+  const link = (id, day) => { if (!day) return; const b = document.getElementById(id); b.disabled = false; b.onclick = () => { location.href = ROOT + 'editions/' + day + '.html'; }; };
+  link('prevDay', list[i - 1]);
+  if (i >= 0) link('nextDay', list[i + 1]);
+}).catch(() => {});
+</script>
+</body>
+</html>
