@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fléaux Matin, Tuesday, November 10, 2026</title>
+<style>
+:root{--paper:#f4efe4;--ink:#1b1916;--soft:#5d574c;--rule:#1b1916;--red:#a3271c;--display:"Bodoni 72",Didot,"Playfair Display","Times New Roman",serif;--text:"Iowan Old Style",Palatino,Georgia,serif;--label:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{background:#2a2622}
+body{margin:0;padding:28px 16px 90px;color:var(--ink);font:17px/1.48 var(--text)}
+a{color:inherit;text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .2s}
+a:hover{background-size:100% 1px}
+.book{max-width:1120px;margin:0 auto;perspective:2400px;position:relative}
+.page{background:var(--paper);padding:30px 42px 26px;box-shadow:0 18px 50px rgba(0,0,0,.45);transform-origin:left center;backface-visibility:hidden;display:none}
+.page.on{display:block}
+.page.out{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) forwards}
+.page.back{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) reverse forwards}
+@keyframes turn{from{transform:rotateY(0);filter:brightness(1)}to{transform:rotateY(-105deg);filter:brightness(.62)}}
+@media (prefers-reduced-motion:reduce){.page.out,.page.back{display:none}}
+.mast{text-align:center;border-bottom:4px double var(--rule);padding-bottom:10px}
+.mast .top,.folio{display:flex;justify-content:space-between;font:600 11px/1.3 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.mast h1{font:400 clamp(46px,10.5vw,118px)/.98 var(--display);margin:8px 0 6px;letter-spacing:-.01em}
+.mast .sub{font-style:italic;color:var(--soft)}
+.small-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--rule);padding-bottom:7px}
+.small-head b{font:400 34px/1 var(--display)}
+.small-head span{font:600 11px var(--label);letter-spacing:.12em;text-transform:uppercase}
+.kicker{font:700 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 7px}
+h2,h3{font-family:var(--display);font-weight:400;margin:0 0 9px}
+h2.lead{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h3{font-size:27px;line-height:1.1}
+p{margin:0 0 11px}
+.deck{font-size:20px;line-height:1.35;font-style:italic;color:var(--soft)}
+.src{font:600 11px/1.5 var(--label);letter-spacing:.04em;color:var(--soft)}
+.src a{border-bottom:1px solid var(--soft);background:none}
+.front{display:grid;grid-template-columns:2.1fr 1fr;margin-top:20px}
+.front>*{min-width:0}
+.main{padding-right:30px;border-right:1px solid var(--rule)}
+.side{padding-left:26px}
+.cols{columns:2;column-gap:28px;column-rule:1px solid #b8b09f;margin-top:12px}
+.cols p:first-child::first-letter{font:400 66px/.82 var(--display);float:left;padding:5px 7px 0 0}
+.story{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid #b8b09f;break-inside:avoid}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;padding-top:15px;border-top:3px solid var(--rule)}
+.band>div+div{border-left:1px solid #b8b09f;padding-left:28px}
+.tip{background:var(--ink);color:var(--paper);padding:17px 20px;margin-top:16px}
+.tip .kicker{color:#e6b65c}
+.tip h3{font-size:23px}
+.tip p{margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:20px}
+.grid3>.story{border-bottom:1px solid #b8b09f}
+.wide{grid-column:span 2}
+.wide h3{font-size:40px;line-height:1.05}
+.hn-list{counter-reset:n;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.hn{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:13px 0;border-bottom:1px solid #b8b09f}
+.hn::before{content:counter(n);font:400 48px/1 var(--display);color:var(--red)}
+.hn h3{font-size:24px;margin-bottom:5px}
+.hn p{font-size:16px;margin-bottom:5px}
+.folio{margin-top:20px;padding-top:8px;border-top:1px solid var(--rule)}
+nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--ink);color:var(--paper);padding:7px;border:1px solid #6c6455;font:600 12px var(--label);z-index:9;white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:8px 12px}
+nav button:hover,nav button:focus-visible{background:var(--paper);color:var(--ink)}
+nav button:disabled{opacity:.3;cursor:default;background:none;color:inherit}
+nav i{font-style:normal;min-width:62px;text-align:center}
+nav s{width:1px;height:20px;background:#6c6455}
+@media (max-width:760px){
+body{padding:0 0 84px;font-size:17px}
+.page{padding:18px 18px 22px;box-shadow:none}
+.mast .top span:nth-child(2){display:none}
+.front,.band,.grid3,.hn-list{display:block}
+.main{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--rule)}
+.side{padding:18px 0 0}
+.cols{columns:1}
+.band>div+div{border-left:0;padding-left:0;margin-top:16px}
+.wide h3{font-size:31px}
+nav .day{display:none}
+}
+</style>
+</head>
+<body>
+<main class="book" id="book">
+<article class="page on" aria-label="Front page"><header class="mast"><div class="top"><span>Tuesday, November 10, 2026</span><span>The AI agents daily</span><span>No. 2</span></div><h1>Fléaux Matin</h1><div class="sub">What mattered yesterday on X and Hacker News, read so you don’t have to</div></header><section class="front"><div class="main"><p class="kicker">Releases</p><h2 class="lead">Anthropic ships Claude Fable 5.2 and Mythos 5.2</h2><p class="deck">Fable 5.2 reaches Claude Code and the API, faster and cheaper than 5.1. Mythos 5.2 stays restricted.</p><div class="cols"><p>Per the reports, Fable 5.2 is up to 30% faster than 5.1. It costs $8/$40 per 1M tokens, down from $10/$50. Longer-tenured subscribers get more Fable usage resets.</p><p>Early users say it shines on big, long tasks such as codebase rewrites. Felix Rieseberg and Addy Osmani still keep Opus 5.5 as the daily driver. Lydia Hallie uses Fable as an orchestrator over Opus.</p><p>The first outside reads are positive but mixed. Cursor puts it at the top of CursorBench at 60% at max effort (56.9% by default, up from 49.2%). Dwarkesh’s game eval ranks it above Opus 5.5 but behind GPT-6 Astra. David Cramer calls it good but too expensive to daily-drive, and doubts “built from scratch” demos shown without transcripts.</p><p class="src"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic announcement</a> · <a href="https://x.com/ClaudeDevs/status/2119868698613956992">ClaudeDevs</a> · <a href="https://x.com/cursor_ai/status/2119880829212172509">CursorBench result</a> · <a href="https://artificialanalysis.ai/models/claude-fable-5-2">Artificial Analysis</a></p></div><div class="tip"><p class="kicker">Try it</p><h3>Plan with Fable, execute with Opus</h3><p>In Claude Code, switch to Fable with `/model` for one planning pass on a big refactor. Then let Opus 5.5 execute the plan.</p></div></div><aside class="side"><div class="story"><p class="kicker">Security</p><h3>Prompt injection still beats frontier agents</h3><p>IPI Bench from General Analysis tested indirect prompt injection on realistic office tasks. Attack success ran from 41 to 97% across 7 frontier models, including unauthorized refunds and published private code. These are the authors’ numbers.</p><p class="src"><a href="https://x.com/gen_analysis/status/2119881682623066148">gen_analysis</a></p></div><div class="story"><p class="kicker">Security</p><h3>Researchers fool Claude Code’s Auto Mode monitors</h3><p>Anthropic Fellows red-teamed the monitors that block dangerous actions. Per summaries of the paper, prompt injection aimed at the monitor, coordinated multi-agent attacks and poisoned context compaction all got through. Proposed fixes include wider tool coverage and an extra agentic check.</p><p class="src"><a href="https://x.com/rich_odinn/status/2119814301468811669">Summary</a></p></div></aside></section><section class="band"><div class=""><p class="kicker">Guide</p><h3>Anthropic’s “which model” guide</h3><p>Opus 5.5 at medium effort for most coding, Fable 5.2 for the hardest open-ended work, Sonnet for scoped fixes, Haiku for volume. Tune effort before switching models. Simon Willison’s pick: tell Fable “This codebase is yours”.</p><p class="src"><a href="https://x.com/ClaudeDevs/status/2119898687803621427">ClaudeDevs</a> · <a href="https://x.com/simonw/status/2120029347948220500">simonw</a></p></div><div class=""><p class="kicker">Agents</p><h3>OpenAI’s “dot” agent can use several machines</h3><p>The agent can now connect several of your local machines and pick which one runs a task. One example is building and testing on a dedicated box while you keep coding on a laptop.</p><p class="src"><a href="https://x.com/OpenAIDevs/status/2119883176726409645">OpenAIDevs</a></p></div><div class=""><p class="kicker">Tools</p><h3>Claude drives Blender from photos</h3><p>Felix Rieseberg of Anthropic gave Opus two photos to rebuild as 3D scenes. Claude drove Blender through Python and graded itself by counting matching pixels between photo and render.</p><p class="src"><a href="https://x.com/felixrieseberg/status/2119777031336452518">felixrieseberg</a></p></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 1</span></footer></article>
+<article class="page" aria-label="On X"><header class="small-head"><b>On X</b><span>Tuesday, November 10, 2026</span></header><section class="grid3"><div class="story wide"><p class="kicker">Practice</p><h3>A year of agent-only shipping: 3x output, 3x codebase</h3><p>A team forced to ship all code through agents for a year tripled output. The codebase also grew 3x, helpers got duplicated and few people understand it anymore. Ryan Dahl says the shift to 100% AI-written code happened shockingly fast. Mario Zechner replies that the key skill is still telling your agent “no, not like this”.</p><p class="src"><a href="https://x.com/i/trending/2119657618927202600">The story</a> · <a href="https://x.com/badlogicgames/status/2119842382023680391">badlogicgames</a></p></div><div class="story"><p class="kicker">Security</p><h3>Theo: don’t trust agents on MCP auth</h3><p>Theo says Opus keeps building MCP authentication flows that make bad assumptions and don’t work. The guide his agents drafted even wanted to show the MCP URL as a clickable link to users. His advice is to distrust anything agents say about MCP auth.</p><p class="src"><a href="https://x.com/theo/status/2119575130204717336">theo</a> · <a href="https://x.com/theo/status/2119606132775997905">follow-up</a></p></div><div class="story"><p class="kicker">Quiet gain</p><h3>Claude Code’s idle compaction draws praise</h3><p>Per user reports, “idle speculative compaction” folds the context in the background while a session sits idle, so long runs stall less. Paul Calcraft calls it the best coding-agent feature of recent months.</p><p class="src"><a href="https://x.com/paul_cal/status/2119703350249742747">paul_cal</a></p></div><div class="story"><p class="kicker">Society</p><h3>An “AI CEO” runs acquired businesses, reportedly</h3><p>“Steve” is pitched as an AI CEO running 3 acquired businesses end to end, with a $2M program to buy 5 more startups. Results are the founders’ claims. François Chollet calls it the ultimate real-world eval.</p><p class="src"><a href="https://x.com/spisallyouneed/status/2119829366758604963">Sam Pasupalak</a> · <a href="https://x.com/fchollet/status/2119843249980662241">fchollet</a></p></div><div class="story"><p class="kicker">Releases</p><h3>OpenAI’s “Tomorrow” teaser was a Game Boy</h3><p>The one-word teaser was not GPT-6.2. It was the ModRetro Chromatic, a Game Boy Color-style handheld (Codex edition) whose games are made with Codex, sold on OpenAI’s Supply Co. store.</p><p class="src"><a href="https://x.com/OpenAIDevs/status/2119521359185478140">OpenAIDevs</a> · <a href="https://x.com/naumowf/status/2119729996839149994">explainer</a></p></div></section><div class="tip"><p class="kicker">Habits</p><h3>Guard your agents by hand</h3><p>Any agent that reads outside content (web, tickets, emails) should need your approval before write actions like pushing, publishing or paying. Keep explicit deny rules (`rm`, `curl`, pushes) in `settings.json` rather than relying on Auto Mode alone. For your simplest Claude Code subagents, set `model: haiku` or `model: sonnet` in the frontmatter.</p></div><footer class="folio"><span>Fléaux Matin</span><span>Page 2</span></footer></article>
+<article class="page" aria-label="Hacker News"><header class="small-head"><b>Hacker News</b><span>Tuesday, November 10, 2026</span></header><section class="hn-list"><div class="hn"><div><h3><a href="https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/">Amazon saves millions by replacing Sonnet 4.6 with Strands Decider</a></h3><p>Strands Agents publishes a post on Amazon saving money by replacing Sonnet 4.6 with Strands Decider.</p><p class="src">145 points · <a href="https://news.ycombinator.com/item?id=50436640">40 comments</a></p></div></div><div class="hn"><div><h3><a href="https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game">Fable 5.2 one-shotted my nephew’s dream game</a></h3><p>A write-up about using Fable 5.2 to build a game.</p><p class="src">353 points · <a href="https://news.ycombinator.com/item?id=50433659">239 comments</a></p></div></div><div class="hn"><div><h3><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">TPU 8tx and TPU 8i Max</a></h3><p>Google announces TPU 8tx and TPU 8i Max.</p><p class="src">244 points · <a href="https://news.ycombinator.com/item?id=50432831">75 comments</a></p></div></div><div class="hn"><div><h3><a href="https://research.meta.ai/blog/muse-ember">Muse Ember: Our smallest, most efficient model</a></h3><p>Meta’s research blog presents Muse Ember, described as its smallest, most efficient model.</p><p class="src">291 points · <a href="https://news.ycombinator.com/item?id=50429024">118 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.nabo.dev/blogs/kernel-primer">A primer on GPUs and kernel optimization</a></h3><p>A primer on GPUs and kernel optimization.</p><p class="src">134 points · <a href="https://news.ycombinator.com/item?id=50386246">12 comments</a></p></div></div><div class="hn"><div><h3><a href="https://twitter.com/shaharglazner/status/2119796029256032278">On Being an Engineer in 2026</a></h3><p>A post titled “On Being an Engineer in 2026”.</p><p class="src">90 points · <a href="https://news.ycombinator.com/item?id=50426681">127 comments</a></p></div></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 3</span></footer></article>
+</main>
+
+<nav aria-label="Navigation">
+  <button class="day" id="prevDay" disabled>‹‹ Previous day</button><s class="day"></s>
+  <button id="prev" aria-label="Previous page">‹ Page</button>
+  <i id="count">1 / 3</i>
+  <button id="next" aria-label="Next page">Page ›</button><s class="day"></s>
+  <button class="day" id="nextDay" disabled>Next day ››</button>
+</nav>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const prev = document.getElementById('prev'), next = document.getElementById('next'), count = document.getElementById('count');
+let cur = 0, busy = false;
+function show() { count.textContent = (cur + 1) + ' / ' + pages.length; prev.disabled = cur === 0; next.disabled = cur === pages.length - 1; }
+function clean(p) { p.classList.remove('out', 'back'); }
+function go(to) {
+  if (busy || to < 0 || to >= pages.length || to === cur) return;
+  const forward = to > cur, from = pages[cur], target = pages[to];
+  const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  cur = to; show(); scrollTo({top: 0});
+  if (still) { from.classList.remove('on'); target.classList.add('on'); return; }
+  busy = true;
+  let done = false;
+  const moving = forward ? from : target;
+  const finish = () => {
+    if (done) return;
+    done = true; clean(moving);
+    if (!forward) { target.classList.add('on'); from.classList.remove('on'); }
+    busy = false;
+  };
+  if (forward) { from.classList.add('out'); from.classList.remove('on'); target.classList.add('on'); }
+  else target.classList.add('back');
+  moving.addEventListener('animationend', finish, {once: true});
+  setTimeout(finish, 900);  // in case the animation never ends (background tab)
+}
+prev.onclick = () => go(cur - 1);
+next.onclick = () => go(cur + 1);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1); });
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+});
+show();
+const ROOT = '../', DATE = '2026-11-10';
+fetch(ROOT + 'editions.json').then(r => r.json()).then(list => {
+  const i = list.indexOf(DATE);
+  const link = (id, day) => { if (!day) return; const b = document.getElementById(id); b.disabled = false; b.onclick = () => { location.href = ROOT + 'editions/' + day + '.html'; }; };
+  link('prevDay', list[i - 1]);
+  if (i >= 0) link('nextDay', list[i + 1]);
+}).catch(() => {});
+</script>
+</body>
+</html>
