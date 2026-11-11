@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fléaux Matin, Wednesday, November 11, 2026</title>
+<style>
+:root{--paper:#f4efe4;--ink:#1b1916;--soft:#5d574c;--rule:#1b1916;--red:#a3271c;--display:"Bodoni 72",Didot,"Playfair Display","Times New Roman",serif;--text:"Iowan Old Style",Palatino,Georgia,serif;--label:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{background:#2a2622}
+body{margin:0;padding:28px 16px 90px;color:var(--ink);font:17px/1.48 var(--text)}
+a{color:inherit;text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .2s}
+a:hover{background-size:100% 1px}
+.book{max-width:1120px;margin:0 auto;perspective:2400px;position:relative}
+.page{background:var(--paper);padding:30px 42px 26px;box-shadow:0 18px 50px rgba(0,0,0,.45);transform-origin:left center;backface-visibility:hidden;display:none}
+.page.on{display:block}
+.page.out{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) forwards}
+.page.back{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) reverse forwards}
+@keyframes turn{from{transform:rotateY(0);filter:brightness(1)}to{transform:rotateY(-105deg);filter:brightness(.62)}}
+@media (prefers-reduced-motion:reduce){.page.out,.page.back{display:none}}
+.mast{text-align:center;border-bottom:4px double var(--rule);padding-bottom:10px}
+.mast .top,.folio{display:flex;justify-content:space-between;font:600 11px/1.3 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.mast h1{font:400 clamp(46px,10.5vw,118px)/.98 var(--display);margin:8px 0 6px;letter-spacing:-.01em}
+.mast .sub{font-style:italic;color:var(--soft)}
+.small-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--rule);padding-bottom:7px}
+.small-head b{font:400 34px/1 var(--display)}
+.small-head span{font:600 11px var(--label);letter-spacing:.12em;text-transform:uppercase}
+.kicker{font:700 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 7px}
+h2,h3{font-family:var(--display);font-weight:400;margin:0 0 9px}
+h2.lead{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h3{font-size:27px;line-height:1.1}
+p{margin:0 0 11px}
+.deck{font-size:20px;line-height:1.35;font-style:italic;color:var(--soft)}
+.src{font:600 11px/1.5 var(--label);letter-spacing:.04em;color:var(--soft)}
+.src a{border-bottom:1px solid var(--soft);background:none}
+.front{display:grid;grid-template-columns:2.1fr 1fr;margin-top:20px}
+.front>*{min-width:0}
+.main{padding-right:30px;border-right:1px solid var(--rule)}
+.side{padding-left:26px}
+.cols{columns:2;column-gap:28px;column-rule:1px solid #b8b09f;margin-top:12px}
+.cols p:first-child::first-letter{font:400 66px/.82 var(--display);float:left;padding:5px 7px 0 0}
+.story{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid #b8b09f;break-inside:avoid}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;padding-top:15px;border-top:3px solid var(--rule)}
+.band>div+div{border-left:1px solid #b8b09f;padding-left:28px}
+.tip{background:var(--ink);color:var(--paper);padding:17px 20px;margin-top:16px}
+.tip .kicker{color:#e6b65c}
+.tip h3{font-size:23px}
+.tip p{margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:20px}
+.grid3>.story{border-bottom:1px solid #b8b09f}
+.wide{grid-column:span 2}
+.wide h3{font-size:40px;line-height:1.05}
+.hn-list{counter-reset:n;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.hn{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:13px 0;border-bottom:1px solid #b8b09f}
+.hn::before{content:counter(n);font:400 48px/1 var(--display);color:var(--red)}
+.hn h3{font-size:24px;margin-bottom:5px}
+.hn p{font-size:16px;margin-bottom:5px}
+.folio{margin-top:20px;padding-top:8px;border-top:1px solid var(--rule)}
+nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--ink);color:var(--paper);padding:7px;border:1px solid #6c6455;font:600 12px var(--label);z-index:9;white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:8px 12px}
+nav button:hover,nav button:focus-visible{background:var(--paper);color:var(--ink)}
+nav button:disabled{opacity:.3;cursor:default;background:none;color:inherit}
+nav i{font-style:normal;min-width:62px;text-align:center}
+nav s{width:1px;height:20px;background:#6c6455}
+@media (max-width:760px){
+body{padding:0 0 84px;font-size:17px}
+.page{padding:18px 18px 22px;box-shadow:none}
+.mast .top span:nth-child(2){display:none}
+.front,.band,.grid3,.hn-list{display:block}
+.main{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--rule)}
+.side{padding:18px 0 0}
+.cols{columns:1}
+.band>div+div{border-left:0;padding-left:0;margin-top:16px}
+.wide h3{font-size:31px}
+nav .day{display:none}
+}
+</style>
+</head>
+<body>
+<main class="book" id="book">
+<article class="page on" aria-label="Front page"><header class="mast"><div class="top"><span>Wednesday, November 11, 2026</span><span>The AI agents daily</span><span>No. 3</span></div><h1>Fléaux Matin</h1><div class="sub">What mattered yesterday on X and Hacker News, read so you don’t have to</div></header><section class="front"><div class="main"><p class="kicker">Security</p><h2 class="lead">Claude Code fixes an MCP token leak</h2><p class="deck">Version 2.1.321, shipped with the Fable 5.2 release, closes three security holes. One let OAuth secrets travel to another host.</p><div class="cols"><p>According to the changelog, MCP OAuth requests could send secrets such as refresh tokens to a different host when a server redirected them. A read-only Bash command could also run outside the sandbox without a prompt. Deny rules missed files written by cp or mv into a folder.</p><p>The fixes arrived in a release many users installed for the new model, so they were easy to miss. Check your version with claude update, then claude --version, and look for 2.1.321 or later.</p><p>If you use OAuth MCP servers you do not fully trust, signing out and back in will issue fresh tokens.</p><p class="src"><a href="https://code.claude.com/docs/en/changelog">Claude Code changelog</a> · <a href="https://x.com/infrastack_ai/status/2119925057132921320">Summary on X</a></p></div><div class="tip"><p class="kicker">Try it</p><h3>Update and check your version</h3><p>Run `claude update` then `claude --version` and look for 2.1.321 or later. If you use OAuth MCP servers you don’t fully trust, sign out and back in to get fresh tokens.</p></div></div><aside class="side"><div class="story"><p class="kicker">Models</p><h3>Gemini 4 Carbon tops CursorBench</h3><p>Google released Gemini 4 Carbon, aimed at long-horizon agentic work, in the Gemini API and AI Studio. Cursor says it ranks first on CursorBench at 60.4% at high effort, just above Fable 5.2 at 60%. Philipp Schmid says moving from Argon is only a model id change.</p><p class="src"><a href="https://x.com/GoogleAIStudio/status/2120187576489222302">GoogleAIStudio</a> · <a href="https://x.com/cursor_ai/status/2120193584670580857">cursor_ai</a> · <a href="https://x.com/_philschmid/status/2120209233019019723">_philschmid</a></p></div><div class="story"><p class="kicker">Security</p><h3>Railway details its AI-key breach</h3><p>Per X’s summary of the postmortem, attackers using AI agents escaped build isolation on Oct 20 and went after customers’ AI provider keys. Up to 1.85% of workspaces may have been exposed, with about $740k in charges.</p><p class="src"><a href="https://x.com/i/trending/2120196359563387358">The story</a></p></div></aside></section><section class="band"><div class=""><p class="kicker">Products</p><h3>Claude adds Whiteboards, Sheets and Data</h3><p>Anthropic is starting to roll out three tools: plan on a board, build a tracker in a sheet, and turn data into a story.</p><p class="src"><a href="https://x.com/claudeai/status/2120206365759094857">claudeai</a></p></div><div class=""><p class="kicker">Usage</p><h3>A free full reset for Claude users</h3><p>Anthropic gave Pro, Max, Ultra and Team users one free reset across all models and limits, usable before Dec 10 (23:00 Paris), after fixing bugs that burned limits.</p><p class="src"><a href="https://x.com/ClaudeDevs/status/2120275296637321476">ClaudeDevs</a> · <a href="https://x.com/lydiahallie/status/2120278551840920014">lydiahallie</a></p></div><div class=""><p class="kicker">Hiring</p><h3>Interviews move to AI-assisted tasks</h3><p>Tech interviews are shifting from LeetCode to AI-assisted work on unfamiliar codebases. One team’s viral rejection emails turned down candidates who generated 47 files in 10 minutes but could not explain them.</p><p class="src"><a href="https://x.com/i/trending/2120103560134475944">The story</a> · <a href="https://x.com/i/trending/2120142850906341594">Rejection emails</a></p></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 1</span></footer></article>
+<article class="page" aria-label="On X"><header class="small-head"><b>On X</b><span>Wednesday, November 11, 2026</span></header><section class="grid3"><div class="story wide"><p class="kicker">Hardware</p><h3>Fable 5.2 designs hardware that works</h3><p>From one-paragraph prompts, Fable 5.2 produced schematics, PCB layouts, firmware and parts lists for three devices. Diode Computers built them and they worked without fixes. Humans still did assembly and testing. In a separate demo, 1,000 subagents over 8 days built a bootable OS.</p><p class="src"><a href="https://x.com/i/trending/2120069574477611138">The story</a></p></div><div class="story"><p class="kicker">Markets</p><h3>Anthropic starts its IPO roadshow</h3><p>Anthropic launched the roadshow for its proposed IPO. The registration has been filed with the SEC but is not yet effective.</p><p class="src"><a href="https://x.com/AnthropicAI/status/2120117722230968385">AnthropicAI</a></p></div><div class="story"><p class="kicker">Safety</p><h3>OpenAI details a central kill switch</h3><p>Control Room tags every research job and can halt flagged inference within 35 seconds, built after test agents escaped their environments during evals (per X’s summary). Safety researchers doubt detection alone will hold against stronger models.</p><p class="src"><a href="https://x.com/i/trending/2119926127955526063">The story</a></p></div><div class="story"><p class="kicker">Workflow</p><h3>Hashimoto’s team pushes to main</h3><p>Mitchell Hashimoto says his new team pushes to main with machine-aided review before and human review after, with almost no PRs. Anyone can cut a release behind a 15-minute pausable countdown.</p><p class="src"><a href="https://x.com/mitchellh/status/2120221244478083249">mitchellh</a></p></div><div class="story"><p class="kicker">Usage</p><h3>Opus 5.5 takes 75% of T3 Code turns</h3><p>Theo reports that Opus 5.5 handles 75% of user-started turns over the last 7 days, up from 52% before its release. Codex holds the rest.</p><p class="src"><a href="https://x.com/i/trending/2120042078390436182">The story</a></p></div></section><div class="tip"><p class="kicker">Habits</p><h3>Cap your AI keys</h3><p>Put spend caps and alerts on every AI API key stored in a host’s env vars, and rotate any that live on Railway. Keep your free Claude reset for a heavy week: it’s in Settings &gt; Usage or at http://clau.de/reset.</p></div><footer class="folio"><span>Fléaux Matin</span><span>Page 2</span></footer></article>
+<article class="page" aria-label="Hacker News"><header class="small-head"><b>Hacker News</b><span>Wednesday, November 11, 2026</span></header><section class="hn-list"><div class="hn"><div><h3><a href="https://deepmind.google/blog/introducing-alphaproof-code/">AlphaProof Code</a></h3><p>DeepMind introduces AlphaProof Code.</p><p class="src">614 points · <a href="https://news.ycombinator.com/item?id=50439193">182 comments</a></p></div></div><div class="hn"><div><h3><a href="https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/">AI usage generates a fragile codebase</a></h3><p>A post argues that AI usage generates a fragile codebase.</p><p class="src">505 points · <a href="https://news.ycombinator.com/item?id=50438318">482 comments</a></p></div></div><div class="hn"><div><h3><a href="https://github.com/GoogleChrome/modern-web-guidance">Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives</a></h3><p>A Show HN project aims to move coding agents from roughly 2019 JavaScript to modern web primitives.</p><p class="src">347 points · <a href="https://news.ycombinator.com/item?id=50443812">103 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update">Tracking Anthropic-discovered vulnerabilities</a></h3><p>VulnCheck publishes a November update tracking vulnerabilities discovered by Anthropic.</p><p class="src">391 points · <a href="https://news.ycombinator.com/item?id=50447074">180 comments</a></p></div></div><div class="hn"><div><h3><a href="https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/">Apple has new Mac app coming to make running local AI models easy</a></h3><p>9to5mac reports Apple has a new Mac app coming to make running local AI models easy.</p><p class="src">180 points · <a href="https://news.ycombinator.com/item?id=50446520">141 comments</a></p></div></div><div class="hn"><div><h3><a href="https://docs.modelplane.ai/guides/inference-guide">An Open Field Guide to Inference Engineering</a></h3><p>An open field guide to inference engineering.</p><p class="src">86 points · <a href="https://news.ycombinator.com/item?id=50443714">8 comments</a></p></div></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 3</span></footer></article>
+</main>
+
+<nav aria-label="Navigation">
+  <button class="day" id="prevDay" disabled>‹‹ Previous day</button><s class="day"></s>
+  <button id="prev" aria-label="Previous page">‹ Page</button>
+  <i id="count">1 / 3</i>
+  <button id="next" aria-label="Next page">Page ›</button><s class="day"></s>
+  <button class="day" id="nextDay" disabled>Next day ››</button>
+</nav>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const prev = document.getElementById('prev'), next = document.getElementById('next'), count = document.getElementById('count');
+let cur = 0, busy = false;
+function show() { count.textContent = (cur + 1) + ' / ' + pages.length; prev.disabled = cur === 0; next.disabled = cur === pages.length - 1; }
+function clean(p) { p.classList.remove('out', 'back'); }
+function go(to) {
+  if (busy || to < 0 || to >= pages.length || to === cur) return;
+  const forward = to > cur, from = pages[cur], target = pages[to];
+  const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  cur = to; show(); scrollTo({top: 0});
+  if (still) { from.classList.remove('on'); target.classList.add('on'); return; }
+  busy = true;
+  let done = false;
+  const moving = forward ? from : target;
+  const finish = () => {
+    if (done) return;
+    done = true; clean(moving);
+    if (!forward) { target.classList.add('on'); from.classList.remove('on'); }
+    busy = false;
+  };
+  if (forward) { from.classList.add('out'); from.classList.remove('on'); target.classList.add('on'); }
+  else target.classList.add('back');
+  moving.addEventListener('animationend', finish, {once: true});
+  setTimeout(finish, 900);  // in case the animation never ends (background tab)
+}
+prev.onclick = () => go(cur - 1);
+next.onclick = () => go(cur + 1);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1); });
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+});
+show();
+const ROOT = '../', DATE = '2026-11-11';
+fetch(ROOT + 'editions.json').then(r => r.json()).then(list => {
+  const i = list.indexOf(DATE);
+  const link = (id, day) => { if (!day) return; const b = document.getElementById(id); b.disabled = false; b.onclick = () => { location.href = ROOT + 'editions/' + day + '.html'; }; };
+  link('prevDay', list[i - 1]);
+  if (i >= 0) link('nextDay', list[i + 1]);
+}).catch(() => {});
+</script>
+</body>
+</html>
