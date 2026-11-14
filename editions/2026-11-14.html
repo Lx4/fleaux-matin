@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fléaux Matin, Saturday, November 14, 2026</title>
+<style>
+:root{--paper:#f4efe4;--ink:#1b1916;--soft:#5d574c;--rule:#1b1916;--red:#a3271c;--display:"Bodoni 72",Didot,"Playfair Display","Times New Roman",serif;--text:"Iowan Old Style",Palatino,Georgia,serif;--label:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{background:#2a2622}
+body{margin:0;padding:28px 16px 90px;color:var(--ink);font:17px/1.48 var(--text)}
+a{color:inherit;text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .2s}
+a:hover{background-size:100% 1px}
+.book{max-width:1120px;margin:0 auto;perspective:2400px;position:relative}
+.page{background:var(--paper);padding:30px 42px 26px;box-shadow:0 18px 50px rgba(0,0,0,.45);transform-origin:left center;backface-visibility:hidden;display:none}
+.page.on{display:block}
+.page.out{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) forwards}
+.page.back{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) reverse forwards}
+@keyframes turn{from{transform:rotateY(0);filter:brightness(1)}to{transform:rotateY(-105deg);filter:brightness(.62)}}
+@media (prefers-reduced-motion:reduce){.page.out,.page.back{display:none}}
+.mast{text-align:center;border-bottom:4px double var(--rule);padding-bottom:10px}
+.mast .top,.folio{display:flex;justify-content:space-between;font:600 11px/1.3 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.mast h1{font:400 clamp(46px,10.5vw,118px)/.98 var(--display);margin:8px 0 6px;letter-spacing:-.01em}
+.mast .sub{font-style:italic;color:var(--soft)}
+.small-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--rule);padding-bottom:7px}
+.small-head b{font:400 34px/1 var(--display)}
+.small-head span{font:600 11px var(--label);letter-spacing:.12em;text-transform:uppercase}
+.kicker{font:700 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 7px}
+h2,h3{font-family:var(--display);font-weight:400;margin:0 0 9px}
+h2.lead{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h3{font-size:27px;line-height:1.1}
+p{margin:0 0 11px}
+.deck{font-size:20px;line-height:1.35;font-style:italic;color:var(--soft)}
+.src{font:600 11px/1.5 var(--label);letter-spacing:.04em;color:var(--soft)}
+.src a{border-bottom:1px solid var(--soft);background:none}
+.front{display:grid;grid-template-columns:2.1fr 1fr;margin-top:20px}
+.front>*{min-width:0}
+.main{padding-right:30px;border-right:1px solid var(--rule)}
+.side{padding-left:26px}
+.cols{columns:2;column-gap:28px;column-rule:1px solid #b8b09f;margin-top:12px}
+.cols p:first-child::first-letter{font:400 66px/.82 var(--display);float:left;padding:5px 7px 0 0}
+.story{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid #b8b09f;break-inside:avoid}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;padding-top:15px;border-top:3px solid var(--rule)}
+.band>div+div{border-left:1px solid #b8b09f;padding-left:28px}
+.tip{background:var(--ink);color:var(--paper);padding:17px 20px;margin-top:16px}
+.tip .kicker{color:#e6b65c}
+.tip h3{font-size:23px}
+.tip p{margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:20px}
+.grid3>.story{border-bottom:1px solid #b8b09f}
+.wide{grid-column:span 2}
+.wide h3{font-size:40px;line-height:1.05}
+.hn-list{counter-reset:n;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.hn{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:13px 0;border-bottom:1px solid #b8b09f}
+.hn::before{content:counter(n);font:400 48px/1 var(--display);color:var(--red)}
+.hn h3{font-size:24px;margin-bottom:5px}
+.hn p{font-size:16px;margin-bottom:5px}
+.folio{margin-top:20px;padding-top:8px;border-top:1px solid var(--rule)}
+nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--ink);color:var(--paper);padding:7px;border:1px solid #6c6455;font:600 12px var(--label);z-index:9;white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:8px 12px}
+nav button:hover,nav button:focus-visible{background:var(--paper);color:var(--ink)}
+nav button:disabled{opacity:.3;cursor:default;background:none;color:inherit}
+nav i{font-style:normal;min-width:62px;text-align:center}
+nav s{width:1px;height:20px;background:#6c6455}
+@media (max-width:760px){
+body{padding:0 0 84px;font-size:17px}
+.page{padding:18px 18px 22px;box-shadow:none}
+.mast .top span:nth-child(2){display:none}
+.front,.band,.grid3,.hn-list{display:block}
+.main{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--rule)}
+.side{padding:18px 0 0}
+.cols{columns:1}
+.band>div+div{border-left:0;padding-left:0;margin-top:16px}
+.wide h3{font-size:31px}
+nav .day{display:none}
+}
+</style>
+</head>
+<body>
+<main class="book" id="book">
+<article class="page on" aria-label="Front page"><header class="mast"><div class="top"><span>Saturday, November 14, 2026</span><span>The AI agents daily</span><span>No. 6</span></div><h1>Fléaux Matin</h1><div class="sub">What mattered yesterday on X and Hacker News, read so you don’t have to</div></header><section class="front"><div class="main"><p class="kicker">Outage</p><h2 class="lead">Claude and Claude Code hit by hours of errors</h2><p class="deck">Elevated errors and login failures hit claude.ai, Claude Code and platform.claude.com from about 10:58 Paris time. Anthropic deployed a fix at 12:05, but many users still reported problems.</p><div class="cols"><p>Anthropic’s status page showed elevated errors across the three services. The company said it was monitoring after the fix, while many users on X kept reporting Claude as down.</p><p>The incident came on the same day as the Microsoft 365 outage. Anthropic has not linked the two. The status incident drew 488 points on Hacker News.</p><p>If a Claude Code session dropped, check the status page before re-running long tasks, then re-authenticate once the incident shows as resolved.</p><p class="src"><a href="https://stspg.io/6kqyd0c5b1gr">Anthropic status</a> · <a href="https://status.claude.com/incidents/nn11wk485zfn">Incident on status.claude.com</a> · <a href="https://x.com/i/trending/2121183770745434246">The story on X</a></p></div><div class="tip"><p class="kicker">Try it</p><h3>Scan your agent skills before trusting them</h3><p>Install NVIDIA’s SkillSpector with `uv tool install git+https://github.com/NVIDIA/skillspector.git`, then run `skillspector scan ~/.claude/skills/ --recursive --no-llm` on the skills you already have installed.</p></div></div><aside class="side"><div class="story"><p class="kicker">Security</p><h3>Cursor’s breach began at a vendor</h3><p>Cursor’s post-mortem on the fake Claude Code extension of Oct 29 traces it to a key issued to its inference vendor Fireworks, which exposed it. Old agent traces (non-Privacy Mode) held unredacted credentials, leading to internal SaaS tools and then the marketplace cache. Cursor has dropped Fireworks and rotated all its credentials.</p><p class="src"><a href="https://cursor.com/blog/security-incident-update">Post-mortem</a> · <a href="https://x.com/cursor_ai/status/2121411147714970092">Cursor on X</a></p></div><div class="story"><p class="kicker">Security</p><h3>Offensive AI gets cheaper</h3><p>XBOW ran Claude Mythos 5.2 and 5.1 on 65 real web vulnerabilities. Both exploited 61, but 5.2 needed $14.72 per target against $45.60 to find 90% of them, with about 3x fewer output tokens.</p><p class="src"><a href="https://x.com/Xbow/status/2121296764946817479">Xbow</a></p></div></aside></section><section class="band"><div class=""><p class="kicker">Outage</p><h3>FAA grounds all US departures for about 4 hours</h3><p>A telecom outage hit air traffic control and the FAA stopped every US departure on Thursday. Over 6,600 flights were cancelled, and a cyberattack was ruled out. The ground stop drew 1505 points on Hacker News.</p><p class="src"><a href="https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247">NBC News</a> · <a href="https://x.com/i/trending/2121380596027101608">The story on X</a></p></div><div class=""><p class="kicker">Funding</p><h3>LangChain raises $300M at a $3B valuation</h3><p>The money will build out LangSmith, its framework-agnostic platform to run, improve and govern agents. LangChain says 7,000+ companies already use it.</p><p class="src"><a href="https://x.com/LangChain/status/2121273623658819687">LangChain</a></p></div><div class=""><p class="kicker">Cloud</p><h3>Microsoft outage shows dependence on Redmond</h3><p>The Register covers the Microsoft outage that landed the same day as Claude’s. The piece frames it as a lesson in customer dependence.</p><p class="src"><a href="https://www.theregister.com/saas/2026/11/13/microsoft-outage-gives-customers-a-crash-course-in-dependence-on-redmond/5309805">The Register</a></p></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 1</span></footer></article>
+<article class="page" aria-label="On X"><header class="small-head"><b>On X</b><span>Saturday, November 14, 2026</span></header><section class="grid3"><div class="story wide"><p class="kicker">Tools</p><h3>Vercel ships a UI SDK for agents</h3><p>The beta offers 50+ reusable UI behaviors (selects, pickers, calendars, focus and keyboard handling) with adapters for React, Vue, Svelte, Solid and Web Components. shadcn built it so agents can compose new components on the fly. Guillermo Rauch calls it “the x86 instruction set for agents”.</p><p class="src"><a href="https://x.com/vercel/status/2120950020249895314">vercel</a> · <a href="https://x.com/shadcn/status/2120951116682682646">shadcn</a></p></div><div class="story"><p class="kicker">Agents</p><h3>ChatGPT Dots reach Europe, and can now pay</h3><p>OpenAI’s always-on background agents are appearing for personal Pro users in the EU, Switzerland and the UK after a 40+ day delay, though some still hit paused agents or upgrade prompts (per X’s summary). In the US, ChatGPT Wallet lets Dots complete purchases with a one-time token, each order approved by Face ID or fingerprint. It is built with Amex, Mastercard and Visa (per X’s summary).</p><p class="src"><a href="https://x.com/i/trending/2121174431485608010">Dots in Europe</a> · <a href="https://x.com/i/trending/2121260659975573668">ChatGPT Wallet</a></p></div><div class="story"><p class="kicker">Security</p><h3>NVIDIA’s SkillSpector scans agent skills</h3><p>The open-source tool (25.8k GitHub stars) checks Claude Code, Codex and MCP skills for prompt injection, data exfiltration and supply-chain risks. NVIDIA’s README says 26.1% of the 31k skills it analyzed had vulnerabilities and 5.2% looked malicious.</p><p class="src"><a href="https://github.com/NVIDIA/SkillSpector">GitHub</a></p></div><div class="story"><p class="kicker">Claude Code</p><h3>Projects coordinator gets more proactive</h3><p>The coordinator now answers questions in the project chat and reports on parallel threads unprompted. On desktop, custom themes can be built by describing them to Claude.</p><p class="src"><a href="https://x.com/ClaudeDevs/status/2121375309287301360">Projects</a> · <a href="https://x.com/ClaudeDevs/status/2121392666244186327">Themes</a></p></div><div class="story"><p class="kicker">Industry</p><h3>Anthropic’s CEO talks with Jamie Dimon before the IPO</h3><p>Dario Amodei held a live fireside chat six days before Anthropic’s IPO. Viewers’ notes highlight compute as its “deepest business dilemma” and a warning that AI cyberattacks will soon happen in seconds.</p><p class="src"><a href="https://x.com/AnthropicAI/status/2121272083863011714">Anthropic</a></p></div></section><div class="tip"><p class="kicker">Habit</p><h3>Make your Stop hooks exit 2</h3><p>Per Lydia Hallie, a Claude Code Stop hook only makes Claude retry when it exits with code 2. Exit 2 sends Claude back with the hook’s stderr, while exit 1 is non-blocking and Claude finishes anyway. Check your test and lint hooks.</p></div><footer class="folio"><span>Fléaux Matin</span><span>Page 2</span></footer></article>
+<article class="page" aria-label="Hacker News"><header class="small-head"><b>Hacker News</b><span>Saturday, November 14, 2026</span></header><section class="hn-list"><div class="hn"><div><h3><a href="https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus">Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs</a></h3><p>A report alleging Nvidia engineered GPU scarcity by funding AI startups to buy its chips.</p><p class="src">420 points · <a href="https://news.ycombinator.com/item?id=50493251">222 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.youtube.com/watch?v=IRK8h67ol7Q">Jonathan Blow – If AI solved coding, why is my software still the same? [video]</a></h3><p>A video talk by Jonathan Blow asking why software looks the same if AI solved coding.</p><p class="src">258 points · <a href="https://news.ycombinator.com/item?id=50484658">266 comments</a></p></div></div><div class="hn"><div><h3><a href="https://github.com/ggml-org/ggml/releases/tag/v1.0.0">Ggml v1.0.0</a></h3><p>Release notes for version 1.0.0 of ggml.</p><p class="src">199 points · <a href="https://news.ycombinator.com/item?id=50493062">32 comments</a></p></div></div><div class="hn"><div><h3><a href="https://claude.com/resources/articles/claude-meetings">Claude Meetings</a></h3><p>Anthropic’s page on Claude Meetings.</p><p class="src">91 points · <a href="https://news.ycombinator.com/item?id=50491097">69 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.perplexity.ai/hub/blog/perplexity-decider">Perplexity Decider v1.3: Training, eval, and use cases</a></h3><p>Perplexity’s blog post on Decider v1.3, covering training, evaluation and use cases.</p><p class="src">122 points · <a href="https://news.ycombinator.com/item?id=50488464">21 comments</a></p></div></div><div class="hn"><div><h3><a href="https://toninoble.com/post/ctrlc-ctrlv-ctrlcve">Ctrl+C, Ctrl+v, Ctrl+cve: Bypassing Android’s Clipboard Read Security Measures</a></h3><p>A write-up on bypassing Android’s clipboard read security measures.</p><p class="src">81 points · <a href="https://news.ycombinator.com/item?id=50487605">38 comments</a></p></div></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 3</span></footer></article>
+</main>
+
+<nav aria-label="Navigation">
+  <button class="day" id="prevDay" disabled>‹‹ Previous day</button><s class="day"></s>
+  <button id="prev" aria-label="Previous page">‹ Page</button>
+  <i id="count">1 / 3</i>
+  <button id="next" aria-label="Next page">Page ›</button><s class="day"></s>
+  <button class="day" id="nextDay" disabled>Next day ››</button>
+</nav>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const prev = document.getElementById('prev'), next = document.getElementById('next'), count = document.getElementById('count');
+let cur = 0, busy = false;
+function show() { count.textContent = (cur + 1) + ' / ' + pages.length; prev.disabled = cur === 0; next.disabled = cur === pages.length - 1; }
+function clean(p) { p.classList.remove('out', 'back'); }
+function go(to) {
+  if (busy || to < 0 || to >= pages.length || to === cur) return;
+  const forward = to > cur, from = pages[cur], target = pages[to];
+  const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  cur = to; show(); scrollTo({top: 0});
+  if (still) { from.classList.remove('on'); target.classList.add('on'); return; }
+  busy = true;
+  let done = false;
+  const moving = forward ? from : target;
+  const finish = () => {
+    if (done) return;
+    done = true; clean(moving);
+    if (!forward) { target.classList.add('on'); from.classList.remove('on'); }
+    busy = false;
+  };
+  if (forward) { from.classList.add('out'); from.classList.remove('on'); target.classList.add('on'); }
+  else target.classList.add('back');
+  moving.addEventListener('animationend', finish, {once: true});
+  setTimeout(finish, 900);  // in case the animation never ends (background tab)
+}
+prev.onclick = () => go(cur - 1);
+next.onclick = () => go(cur + 1);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1); });
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+});
+show();
+const ROOT = '../', DATE = '2026-11-14';
+fetch(ROOT + 'editions.json').then(r => r.json()).then(list => {
+  const i = list.indexOf(DATE);
+  const link = (id, day) => { if (!day) return; const b = document.getElementById(id); b.disabled = false; b.onclick = () => { location.href = ROOT + 'editions/' + day + '.html'; }; };
+  link('prevDay', list[i - 1]);
+  if (i >= 0) link('nextDay', list[i + 1]);
+}).catch(() => {});
+</script>
+</body>
+</html>
