@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fléaux Matin, Monday, November 16, 2026</title>
+<style>
+:root{--paper:#f4efe4;--ink:#1b1916;--soft:#5d574c;--rule:#1b1916;--red:#a3271c;--display:"Bodoni 72",Didot,"Playfair Display","Times New Roman",serif;--text:"Iowan Old Style",Palatino,Georgia,serif;--label:"Avenir Next","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{background:#2a2622}
+body{margin:0;padding:28px 16px 90px;color:var(--ink);font:17px/1.48 var(--text)}
+a{color:inherit;text-decoration:none;background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 1px no-repeat;transition:background-size .2s}
+a:hover{background-size:100% 1px}
+.book{max-width:1120px;margin:0 auto;perspective:2400px;position:relative}
+.page{background:var(--paper);padding:30px 42px 26px;box-shadow:0 18px 50px rgba(0,0,0,.45);transform-origin:left center;backface-visibility:hidden;display:none}
+.page.on{display:block}
+.page.out{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) forwards}
+.page.back{display:block;position:absolute;inset:0 0 auto 0;z-index:3;animation:turn .7s cubic-bezier(.45,.05,.3,1) reverse forwards}
+@keyframes turn{from{transform:rotateY(0);filter:brightness(1)}to{transform:rotateY(-105deg);filter:brightness(.62)}}
+@media (prefers-reduced-motion:reduce){.page.out,.page.back{display:none}}
+.mast{text-align:center;border-bottom:4px double var(--rule);padding-bottom:10px}
+.mast .top,.folio{display:flex;justify-content:space-between;font:600 11px/1.3 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.mast h1{font:400 clamp(46px,10.5vw,118px)/.98 var(--display);margin:8px 0 6px;letter-spacing:-.01em}
+.mast .sub{font-style:italic;color:var(--soft)}
+.small-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double var(--rule);padding-bottom:7px}
+.small-head b{font:400 34px/1 var(--display)}
+.small-head span{font:600 11px var(--label);letter-spacing:.12em;text-transform:uppercase}
+.kicker{font:700 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin:0 0 7px}
+h2,h3{font-family:var(--display);font-weight:400;margin:0 0 9px}
+h2.lead{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h3{font-size:27px;line-height:1.1}
+p{margin:0 0 11px}
+.deck{font-size:20px;line-height:1.35;font-style:italic;color:var(--soft)}
+.src{font:600 11px/1.5 var(--label);letter-spacing:.04em;color:var(--soft)}
+.src a{border-bottom:1px solid var(--soft);background:none}
+.front{display:grid;grid-template-columns:2.1fr 1fr;margin-top:20px}
+.front>*{min-width:0}
+.main{padding-right:30px;border-right:1px solid var(--rule)}
+.side{padding-left:26px}
+.cols{columns:2;column-gap:28px;column-rule:1px solid #b8b09f;margin-top:12px}
+.cols p:first-child::first-letter{font:400 66px/.82 var(--display);float:left;padding:5px 7px 0 0}
+.story{padding:0 0 15px;margin:0 0 15px;border-bottom:1px solid #b8b09f;break-inside:avoid}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px;padding-top:15px;border-top:3px solid var(--rule)}
+.band>div+div{border-left:1px solid #b8b09f;padding-left:28px}
+.tip{background:var(--ink);color:var(--paper);padding:17px 20px;margin-top:16px}
+.tip .kicker{color:#e6b65c}
+.tip h3{font-size:23px}
+.tip p{margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:20px}
+.grid3>.story{border-bottom:1px solid #b8b09f}
+.wide{grid-column:span 2}
+.wide h3{font-size:40px;line-height:1.05}
+.hn-list{counter-reset:n;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.hn{counter-increment:n;display:grid;grid-template-columns:54px 1fr;padding:13px 0;border-bottom:1px solid #b8b09f}
+.hn::before{content:counter(n);font:400 48px/1 var(--display);color:var(--red)}
+.hn h3{font-size:24px;margin-bottom:5px}
+.hn p{font-size:16px;margin-bottom:5px}
+.folio{margin-top:20px;padding-top:8px;border-top:1px solid var(--rule)}
+nav{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;background:var(--ink);color:var(--paper);padding:7px;border:1px solid #6c6455;font:600 12px var(--label);z-index:9;white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:8px 12px}
+nav button:hover,nav button:focus-visible{background:var(--paper);color:var(--ink)}
+nav button:disabled{opacity:.3;cursor:default;background:none;color:inherit}
+nav i{font-style:normal;min-width:62px;text-align:center}
+nav s{width:1px;height:20px;background:#6c6455}
+@media (max-width:760px){
+body{padding:0 0 84px;font-size:17px}
+.page{padding:18px 18px 22px;box-shadow:none}
+.mast .top span:nth-child(2){display:none}
+.front,.band,.grid3,.hn-list{display:block}
+.main{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--rule)}
+.side{padding:18px 0 0}
+.cols{columns:1}
+.band>div+div{border-left:0;padding-left:0;margin-top:16px}
+.wide h3{font-size:31px}
+nav .day{display:none}
+}
+</style>
+</head>
+<body>
+<main class="book" id="book">
+<article class="page on" aria-label="Front page"><header class="mast"><div class="top"><span>Monday, November 16, 2026</span><span>The AI agents daily</span><span>No. 8</span></div><h1>Fléaux Matin</h1><div class="sub">What mattered yesterday on X and Hacker News, read so you don’t have to</div></header><section class="front"><div class="main"><p class="kicker">Developer tools</p><h2 class="lead">Claude Code tries a Code Mode that runs calls in parallel</h2><p class="deck">An experimental setting lets Claude write a short JavaScript program instead of calling tools one by one. The docs flag a safety trade-off in auto mode.</p><div class="cols"><p>Code Mode is available in Claude Code v2.1.323 and later, in the terminal only. Claude writes a bit of JavaScript that runs several tool calls in parallel and returns only what it needs. Daniel San reported 13 tool calls done in 2 model turns.</p><p>There is a catch, according to the docs. In auto mode, the classifier reviews the code as a whole, not each tool call. That makes your deny rules and hooks matter more.</p><p>To test it, start Claude Code with CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1, ask it to find broken links across your Markdown files, then press Ctrl+O to read the code it wrote.</p><p class="src"><a href="https://code.claude.com/docs/en/code-mode">The docs</a> · <a href="https://x.com/dani_avila7/status/2121789088499933223">dani_avila7</a></p></div><div class="tip"><p class="kicker">Try it</p><h3>Run routine tasks at high, not max</h3><p>For routine tasks in Claude Code, try Fable 5.2 at high instead of max. In the Artificial Analysis index it scored 58 at high. Max scored lower because more attempts hit time limits.</p></div></div><aside class="side"><div class="story"><p class="kicker">Security</p><h3>Lovable apps expose passport details and private messages</h3><p>A research write-up reports that Lovable apps exposed passport details and more than 200,000 private messages. The post drew 981 points on Hacker News.</p><p class="src"><a href="https://www.crissyfield.de/research/lovable-en/">Research write-up</a></p></div><div class="story"><p class="kicker">Outage</p><h3>Microsoft 365 outage tied to chlorine gas poisoning at a hotel</h3><p>A WDR report links the Microsoft 365 outage to the poisoning of 15 hotel guests with chlorine gas. It drew 506 points on Hacker News. Separately, Microsoft traced the outage to a capacity upgrade that overloaded its servers. Reports shared on X say the fix was slowed by departed senior engineers and a downed incident tool (per X’s summary of reports).</p><p class="src"><a href="https://www1.wdr.de/nrw/rheinland/rhein-erft-kreis/technischer-defekt-chlor-phantasialand-100.html">WDR report</a> · <a href="https://x.com/i/trending/2121906410506346887">The story on X</a></p></div></aside></section><section class="band"><div class=""><p class="kicker">Security</p><h3>uBlock Origin element picker allowed universal XSS</h3><p>A write-up describes a universal XSS in uBlock Origin that a website could trigger through the element picker. It scored 296 points on Hacker News.</p><p class="src"><a href="https://iter.ca/post/ubo-uxss/">Write-up</a></p></div><div class=""><p class="kicker">Security</p><h3>Old Bitly links are being hijacked</h3><p>Ransomnews reports that old Bitly links are being hijacked, in a story tied to a Burger King tweet. It scored 258 points on Hacker News.</p><p class="src"><a href="https://ransomnews.com/burger-king-tweet-bitly-link-hijack-2026/">Ransomnews</a></p></div><div class=""><p class="kicker">Space</p><h3>SpaceX catches Starship to end Flight 15</h3><p>SpaceX caught the Starship at the end of Flight 15. The story drew 1,673 points on Hacker News, far above the rest. Separately, a Vulcan rocket failed on its return-to-flight launch and 40 Amazon satellites were lost.</p><p class="src"><a href="https://www.spacex.com/launches/starship-flight-15">SpaceX</a> · <a href="https://www.space.com/space-exploration/launches-spacecraft/ula-vulcan-centaur-return-to-flight-amazon-leo-internet-satellite-launch">Space.com on Vulcan</a></p></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 1</span></footer></article>
+<article class="page" aria-label="On X"><header class="small-head"><b>On X</b><span>Monday, November 16, 2026</span></header><section class="grid3"><div class="story wide"><p class="kicker">Benchmarks</p><h3>New coding agent index grades whether a maintainer would merge</h3><p>Artificial Analysis released Coding Agent Index v2.1, which now grades whether a maintainer would actually merge the agent’s change (FrontierCode 2.0). Claude Fable 5.2 and Opus 5.5 in Claude Code share the lead at 58. Cost per task varies about 30x among good setups: $1.51 for Codex + GPT-6.1 Sol (52) against $44.22 for Claude Code + Fable 5.2 max (56).</p><p class="src"><a href="https://x.com/ArtificialAnlys/status/2121393821955334328">ArtificialAnlys</a></p></div><div class="story"><p class="kicker">Ways of working</p><h3>11,000 pull requests in a month at a 0.5% revert rate</h3><p>At the AI Engineer CODE conference, @poteto said the Grok Bot team at SpaceXAI merged 11,000 pull requests in one month with a revert rate around 0.5%. He also cited daily stable releases and more contributors.</p><p class="src"><a href="https://x.com/aiDotEngineer/status/2121981562824564960">aiDotEngineer</a></p></div><div class="story"><p class="kicker">Creative</p><h3>One prompt, a 4K animated film built in Blender</h3><p>Riley Brown gave Fable 5.2 one prompt and got a 2-minute 4K animated film in about 4.5 hours. Claude built every character, prop and scene in Blender by writing Python.</p><p class="src"><a href="https://x.com/rileybrown/status/2121642720045261185">rileybrown</a></p></div><div class="story"><p class="kicker">Markets</p><h3>Stripe data: SaaS stocks recover after the early-2026 panic</h3><p>New Stripe data shows SaaS stock prices back near pre-panic levels, with revenue growth strong or faster. François Chollet called the panic “BS” from the start. The investor sharing the data notes M&amp;A multiples are still down because nobody can price long-term viability.</p><p class="src"><a href="https://x.com/fchollet/status/2122016531878215790">fchollet</a></p></div><div class="story"><p class="kicker">Nvidia</p><h3>Jensen Huang reportedly weighs a return as CEO</h3><p>The FT reports that Huang has told people close to him he might come back as CEO, while the board’s independent probe is still running. Derek Thompson asks what it says about boards and founders.</p><p class="src"><a href="https://x.com/i/status/2122049844252713330">FT via X</a> · <a href="https://x.com/DKThomp/status/2122119743339467216">DKThomp</a></p></div></section><div class="tip"><p class="kicker">Habit</p><h3>Tell the agent it owns the codebase</h3><p>Early and partial: with only 10% of the run done, Dex sees Anthropic’s suggested line “you are the long-term owner of this codebase” seem to double his slopcodebench score for Fable 5.2. Add it to your CLAUDE.md for one week and see if you get less throwaway code.</p></div><footer class="folio"><span>Fléaux Matin</span><span>Page 2</span></footer></article>
+<article class="page" aria-label="Hacker News"><header class="small-head"><b>Hacker News</b><span>Monday, November 16, 2026</span></header><section class="hn-list"><div class="hn"><div><h3><a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/">All AI-generated code should be Open Source</a></h3><p>A blog post argues that all AI-generated code should be open source.</p><p class="src">1145 points · <a href="https://news.ycombinator.com/item?id=50507303">612 comments</a></p></div></div><div class="hn"><div><h3><a href="https://www.youtube.com/watch?v=WPj3aQ-xxpI">Claude Code and Codex reverse engineered my 1994 Jeep’s ECU over a $3 Arduino [video]</a></h3><p>A video shows Claude Code and Codex reverse engineering a 1994 Jeep’s ECU over a $3 Arduino.</p><p class="src">418 points · <a href="https://news.ycombinator.com/item?id=50463399">197 comments</a></p></div></div><div class="hn"><div><h3><a href="https://qwen.ai/blog?id=qwen4-max">Qwen4-Max</a></h3><p>Qwen publishes a blog post on Qwen4-Max.</p><p class="src">406 points · <a href="https://news.ycombinator.com/item?id=50513215">149 comments</a></p></div></div><div class="hn"><div><h3><a href="https://macanorak.com/the-macbook-pros-oled-pwm-problem-when-a-better-display-becomes-worse-to-use/">The MacBook Pro’s OLED PWM problem</a></h3><p>An article looks at the PWM problem on the MacBook Pro’s OLED display.</p><p class="src">472 points · <a href="https://news.ycombinator.com/item?id=50506719">259 comments</a></p></div></div><div class="hn"><div><h3><a href="https://bruceroettgers.eu/blog/protomaps/">Protomaps: Self-hosting map tiles has gotten cheap and easy</a></h3><p>A post on how self-hosting map tiles with Protomaps has become cheap and easy.</p><p class="src">292 points · <a href="https://news.ycombinator.com/item?id=50509837">54 comments</a></p></div></div><div class="hn"><div><h3><a href="https://forum.torproject.org/t/security-release-0-4-9-17/22454">Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack</a></h3><p>The Tor Project issues a security release with a DoS-defense fix during a sustained DDoS attack.</p><p class="src">128 points · <a href="https://news.ycombinator.com/item?id=50512441">30 comments</a></p></div></div></section><footer class="folio"><span>Fléaux Matin</span><span>Page 3</span></footer></article>
+</main>
+
+<nav aria-label="Navigation">
+  <button class="day" id="prevDay" disabled>‹‹ Previous day</button><s class="day"></s>
+  <button id="prev" aria-label="Previous page">‹ Page</button>
+  <i id="count">1 / 3</i>
+  <button id="next" aria-label="Next page">Page ›</button><s class="day"></s>
+  <button class="day" id="nextDay" disabled>Next day ››</button>
+</nav>
+
+<script>
+const pages = [...document.querySelectorAll('.page')];
+const prev = document.getElementById('prev'), next = document.getElementById('next'), count = document.getElementById('count');
+let cur = 0, busy = false;
+function show() { count.textContent = (cur + 1) + ' / ' + pages.length; prev.disabled = cur === 0; next.disabled = cur === pages.length - 1; }
+function clean(p) { p.classList.remove('out', 'back'); }
+function go(to) {
+  if (busy || to < 0 || to >= pages.length || to === cur) return;
+  const forward = to > cur, from = pages[cur], target = pages[to];
+  const still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  cur = to; show(); scrollTo({top: 0});
+  if (still) { from.classList.remove('on'); target.classList.add('on'); return; }
+  busy = true;
+  let done = false;
+  const moving = forward ? from : target;
+  const finish = () => {
+    if (done) return;
+    done = true; clean(moving);
+    if (!forward) { target.classList.add('on'); from.classList.remove('on'); }
+    busy = false;
+  };
+  if (forward) { from.classList.add('out'); from.classList.remove('on'); target.classList.add('on'); }
+  else target.classList.add('back');
+  moving.addEventListener('animationend', finish, {once: true});
+  setTimeout(finish, 900);  // in case the animation never ends (background tab)
+}
+prev.onclick = () => go(cur - 1);
+next.onclick = () => go(cur + 1);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(cur + 1); if (e.key === 'ArrowLeft') go(cur - 1); });
+let x0 = null, y0 = null;
+addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive: true});
+addEventListener('touchend', e => {
+  if (x0 === null) return;
+  const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+  if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  x0 = null;
+});
+show();
+const ROOT = '../', DATE = '2026-11-16';
+fetch(ROOT + 'editions.json').then(r => r.json()).then(list => {
+  const i = list.indexOf(DATE);
+  const link = (id, day) => { if (!day) return; const b = document.getElementById(id); b.disabled = false; b.onclick = () => { location.href = ROOT + 'editions/' + day + '.html'; }; };
+  link('prevDay', list[i - 1]);
+  if (i >= 0) link('nextDay', list[i + 1]);
+}).catch(() => {});
+</script>
+</body>
+</html>
